@@ -4,8 +4,8 @@
     "description": "Test Only Token.",
     "version": "0.0.0",
     "scripts": {
-        "nft:build": "node ./nft_tools/build/index.js",
-        "nft:store": "node --no-warnings ./nft_tools/store/index.mjs",
+        "nft:build": "node ./nft_tools/build",
+        "nft:store": "node --no-warnings ./nft_tools/store",
         "compile": "hardhat compile",
         "test": "hardhat test",
         "deploy": "hardhat run --network rinkeby scripts/deploy.js",
