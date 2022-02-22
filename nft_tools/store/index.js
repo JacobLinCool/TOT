@@ -15,7 +15,7 @@ async function main() {
     const list = fs.readdirSync(path.resolve(dest, "asset")).filter((file) => file.endsWith(".svg"));
 
     const images = [];
-    for (let i = 1; i <= list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         const image_path = path.resolve(dest, "asset", list[i]);
         const image = new File([fs.readFileSync(image_path)], path.basename(image_path), { type: "image/svg+xml" });
         images.push(image);
@@ -26,17 +26,11 @@ async function main() {
     console.log("Stored", images.length, "images in", images_cid);
 
     const metas = [];
-    for (let i = 1; i <= list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         const meta_path = path.resolve(dest, "meta", list[i].replace(".svg", ".json"));
         const meta = JSON.parse(fs.readFileSync(meta_path, "utf8"));
-        meta.image = `ipfs://${images_cid}/${i}.svg`;
+        meta.image = `ipfs://${images_cid}/${list[i]}`;
         metas.push(new File([JSON.stringify(meta)], path.basename(meta_path), { type: "application/json" }));
-    }
-
-    for (let i = 1; i <= list.length; i++) {
-        if (!metas[i - 1].image.include(`ipfs://${images_cid}/${i}.svg`)) {
-            console.log("ERROR: Image not match in meta", i, metas[i - 1].image);
-        }
     }
 
     console.log("Uploading", metas.length, "metas");
