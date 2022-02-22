@@ -1,0 +1,24 @@
+{
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "trailingComma": "all",
+    "semi": true,
+    "singleQuote": false,
+    "plugins": ["./node_modules/prettier-plugin-solidity/src/index.js"],
+    "overrides": [
+        {
+            "files": "*.sol",
+            "options": {
+                "bracketSpacing": true,
+                "explicitTypes": "always"
+            }
+        },
+        {
+            "files": "*.md",
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}
