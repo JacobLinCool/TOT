@@ -6,7 +6,7 @@ const { generate_attributes, inject, text_shadow } = require("./generator");
 
 const NUMBER_OF_NFT = 3000;
 const BASE_URL = "https://nft-svelte.pages.dev/nft/";
-const BASE_SVG_PATH = path.resolve("src", "base.svg");
+const BASE_SVG_PATH = path.resolve("nft_tools", "base.svg");
 const DEST_PATH = path.resolve("nft");
 
 ensure_dirs();
