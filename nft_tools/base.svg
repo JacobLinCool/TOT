@@ -1,0 +1,15 @@
+<!-- Copyright (c) 2022 JacobLinCool. -->
+<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
+    <rect style="fill: $background$;" x="0" y="0" width="256" height="256" />
+    <text style="fill: white; text-anchor: middle; dominant-baseline: central; font-size: 32px;" x="128" y="48">
+        /TOT\
+    </text>
+    <text
+        style="fill: white; text-anchor: middle; dominant-baseline: central; font-size: 96px; $text_shadow$ $text_decoration$ $font_weight$"
+        x="128" y="128">
+        $n$
+    </text>
+    <text style="fill: white; text-anchor: middle; dominant-baseline: central; font-size: 32px;" x="128" y="208">
+        \TOT/
+    </text>
+</svg>

@@ -1,0 +1,36 @@
+{
+    "private": true,
+    "name": "test-only-token",
+    "description": "Test Only Token.",
+    "version": "0.0.0",
+    "scripts": {
+        "nft:build": "node ./nft_tools/build/index.js",
+        "nft:store": "node --no-warnings ./nft_tools/store/index.mjs",
+        "compile": "hardhat compile",
+        "test": "hardhat test",
+        "deploy": "hardhat run --network rinkeby scripts/deploy.js",
+        "format": "prettier --ignore-path .gitignore --write **/*.{js,json,yaml,md,sol} !nft"
+    },
+    "devDependencies": {
+        "@jacoblincool/puddle": "^0.1.1",
+        "@nomiclabs/hardhat-ethers": "^2.0.5",
+        "@nomiclabs/hardhat-waffle": "^2.0.2",
+        "@openzeppelin/contracts": "^4.5.0",
+        "chai": "^4.3.6",
+        "dotenv": "^16.0.0",
+        "ethereum-waffle": "^3.4.0",
+        "ethers": "^5.5.4",
+        "hardhat": "^2.8.4",
+        "nft.storage": "^6.0.0",
+        "prettier": "^2.5.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.19"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "ignoreMissing": [
+                "node-fetch",
+                "typescript"
+            ]
+        }
+    }
+}
